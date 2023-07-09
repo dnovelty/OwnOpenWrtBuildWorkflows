@@ -20,12 +20,12 @@ on:
     inputs:
       force-build:
         description: "Build new firmware anyway"
-        required: true
-        default: "true"
+        required: false
+        default: "false"
       ssh:
         description: "SSH connection to Actions"
-        required: true
-        default: "true"
+        required: false
+        default: "false"
   schedule:
     - cron: 0 16 * * 5
 
