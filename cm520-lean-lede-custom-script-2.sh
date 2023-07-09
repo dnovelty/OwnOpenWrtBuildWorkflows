@@ -62,4 +62,4 @@ index 5ce8f20..fe728f8 100644
    <a href="/cgi-bin/luci/admin/system/admin"><img src="<%=media%>/images/user.png" /></a>
 -- 
 EOF
-git apply 0001-Update-header.htm.patch
+#git apply 0001-Update-header.htm.patch
