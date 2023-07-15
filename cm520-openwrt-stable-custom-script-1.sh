@@ -153,3 +153,4 @@ sed -i 's/src-git-full/src-git/g' feeds.conf.default
 git clone --depth 1 --branch js  --single-branch https://github.com/gngpp/luci-theme-design.git package/luci-theme-design/
 git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go/
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash/
+git clone --depth 1 https://github.com/kiddin9/openwrt-packages.git package/small-package
