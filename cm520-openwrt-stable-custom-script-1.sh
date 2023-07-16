@@ -150,5 +150,5 @@ git config --global user.name "Curious"
 git am opboot.patch
 
 sed -i 's/src-git-full/src-git/g' feeds.conf.default
+sed -i '$a src-git kiddin9 https://github.com/kiddin9/openwrt-packages.git' feeds.conf.default
 git clone --depth 1 --branch js  --single-branch https://github.com/gngpp/luci-theme-design.git package/luci-theme-design/
-git clone --depth 1 https://github.com/kiddin9/openwrt-packages.git package/third-packages/
