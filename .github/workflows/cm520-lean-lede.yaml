@@ -51,11 +51,12 @@ env:
   WETRANSFER_FIRMWARE: false
   RELEASE_FIRMWARE: true
   TIME_ZONE: Asia/Shanghai
+  SYSTEM_ON: ubuntu-22.04
 
 jobs:
   check:
     name: Check for source code updates
-    runs-on: ubuntu-22.04
+    runs-on: $SYSTEM_ON
     outputs:
       cache-hit: ${{ steps.cache-hash.outputs.cache-hit }}
 
@@ -81,7 +82,7 @@ jobs:
 
   build:
     name: Build firmware
-    runs-on: ubuntu-latest
+    runs-on: $SYSTEM_ON
     needs: check
     permissions:
       contents: write
@@ -234,7 +235,7 @@ jobs:
 
   clean:
     name: Clean up old assets
-    runs-on: ubuntu-latest
+    runs-on: $SYSTEM_ON
     permissions:
       actions: write
       contents: write
