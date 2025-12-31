@@ -55,7 +55,7 @@ env:
 jobs:
   check:
     name: Check for source code updates
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.04.05
     outputs:
       cache-hit: ${{ steps.cache-hash.outputs.cache-hit }}
 
@@ -95,6 +95,7 @@ jobs:
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
+          docker rmi `docker images -q`
           sudo -E rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d /usr/local/lib/android
           sudo -E apt-mark hold grub-efi-amd64-signed
           sudo -E apt update
