@@ -56,7 +56,7 @@ env:
 jobs:
   check:
     name: Check for source code updates
-    runs-on: ${{env.SYSTEM_ON}}
+    runs-on: ubuntu-22.04
     outputs:
       cache-hit: ${{ steps.cache-hash.outputs.cache-hit }}
 
@@ -82,7 +82,7 @@ jobs:
 
   build:
     name: Build firmware
-    runs-on: ${{env.SYSTEM_ON}}
+    runs-on: ubuntu-22.04
     needs: check
     permissions:
       contents: write
@@ -235,7 +235,7 @@ jobs:
 
   clean:
     name: Clean up old assets
-    runs-on: ${{env.SYSTEM_ON}}
+    runs-on: ubuntu-22.04
     permissions:
       actions: write
       contents: write
