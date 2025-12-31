@@ -129,10 +129,10 @@ jobs:
       - name: Install feeds
         run: cd openwrt/ && ./scripts/feeds install -a
 
-      - name: Load custom configuration
-        run: |
-          [ -e files ] && mv files/ openwrt/files/
-          [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+      #- name: Load custom configuration
+      #  run: |
+      #    [ -e files ] && mv files/ openwrt/files/
+      #    [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
  
       - name: Run custom-script-2
         run: |
@@ -255,3 +255,4 @@ jobs:
           delete_tags: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
