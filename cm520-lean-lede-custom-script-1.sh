@@ -36,6 +36,6 @@
 #EOF
 #git apply example.patch
 
-echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages.git' >> feeds.conf.default
-echo 'src-git small https://github.com/kenzok8/small.git # passwall 基本依赖' >> feeds.conf.default
-git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go/
+#echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages.git' >> feeds.conf.default
+#echo 'src-git small https://github.com/kenzok8/small.git # passwall 基本依赖' >> feeds.conf.default
+#git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go/
